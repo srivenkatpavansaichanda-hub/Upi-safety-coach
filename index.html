@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b4acb">
+  <title>UPI Safety Coach | Stay Safe Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="UPI Safety Coach home">
+      <span class="brand-mark">✓</span><span>UPI <b>Safety Coach</b></span>
+    </a>
+    <nav><a href="#chat">Check a message</a><a href="#safety">Safety tips</a><a href="#poster">Safety poster</a></nav>
+    <div class="header-tools"><label for="language-select" class="sr-only">Language</label><select id="language-select" aria-label="Choose language"><option value="en">English</option><option value="te">తెలుగు (Telugu)</option><option value="ta">தமிழ் (Tamil)</option><option value="kn">ಕನ್ನಡ (Kannada)</option><option value="ml">മലയാളം (Malayalam)</option></select><a class="nav-report" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">Report cybercrime ↗</a></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> DIGITAL PAYMENT SAFETY</div>
+        <h1>Pause. Check.<br><span>Pay safely.</span></h1>
+        <p class="hero-text">Not sure about a UPI request, refund call, QR code, or payment link? Describe it in general words and learn the warning signs.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#chat">Check a situation <span>→</span></a>
+          <a class="btn btn-outline" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">Official reporting portal ↗</a>
+        </div>
+        <div class="privacy-note"><span class="lock">▣</span> Never type your real PIN, OTP, password, card details, or bank account number here.</div>
+      </div>
+      <div class="hero-visual" aria-label="Safety illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="shield"><span>✓</span></div>
+        <div class="float-card card-safe"><span class="mini-icon green">✓</span><div><b>Think before you pay</b><small>Verify every request</small></div></div>
+        <div class="float-card card-alert"><span class="mini-icon orange">!</span><div><b>Unexpected request?</b><small>Pause and check first</small></div></div>
+        <div class="visual-caption">YOUR DIGITAL SAFETY COMPANION</div>
+      </div>
+    </section>
+
+    <section class="future-strip" aria-label="Safety tools overview">
+      <article class="future-chip"><span class="future-chip-icon">⌁</span><div><b>Scam pattern scanner</b><small>15 built-in warning patterns</small></div><span class="chip-status">READY</span></article>
+      <article class="future-chip"><span class="future-chip-icon">◈</span><div><b>Privacy-first design</b><small>No bank connection or transaction access</small></div><span class="chip-status">PRIVATE</span></article>
+      <article class="future-chip"><span class="future-chip-icon">文</span><div><b>South Indian languages</b><small>English · తెలుగు · தமிழ் · ಕನ್ನಡ · മലയാളം</small></div><span class="chip-status">5 LANGS</span></article>
+    </section>
+
+    <section class="daily-safety section" aria-labelledby="daily-safety-title">
+      <div class="daily-safety-card">
+        <div class="daily-safety-icon" aria-hidden="true">✦</div>
+        <div class="daily-safety-copy"><div class="eyebrow">YOUR DAILY SAFETY PULSE</div><h2 id="daily-safety-title">One smart pause can protect your money.</h2><p id="daily-safety-tip">Always verify payment status inside your own official app. Screenshots and forwarded messages are not proof of payment.</p><small id="daily-safety-count">Safety reminder 1 of 6</small></div>
+        <div class="daily-safety-actions"><button id="next-safety-tip" class="btn btn-primary" type="button">Next tip ↗</button><button id="copy-safety-checklist" class="btn btn-outline" type="button">Copy safety checklist</button></div>
+      </div>
+    </section>
+
+    <section class="emergency-strip">
+      <div class="emergency-copy"><span class="emergency-icon">!</span><div><b>Already lost money to a cyber fraud?</b><p>Contact your bank/payment app promptly and report it through official channels.</p></div></div>
+      <div class="emergency-actions">
+        <a class="btn btn-danger" href="tel:1930">☎ Call 1930</a>
+        <a class="btn btn-dark" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">Report online ↗</a>
+      </div>
+    </section>
+
+    <section class="section chat-section" id="chat">
+      <div class="section-heading">
+        <div><div class="eyebrow">INTERACTIVE SAFETY CHECK</div><h2>What happened?</h2><p>Choose a common situation or describe it below. Use general words only.</p></div>
+        <span class="live-badge"><span></span> Safety assistant</span>
+      </div>
+      <div class="chat-layout">
+        <aside class="scenario-panel">
+          <div class="panel-title"><span>Popular situations</span><button id="test-all" class="test-all" type="button" title="Run the built-in scenario checks">Test all</button></div>
+          <label class="scenario-search-wrap" for="scenario-search"><span aria-hidden="true">⌕</span><input id="scenario-search" type="search" placeholder="Find a scam pattern…" autocomplete="off"></label>
+          <div id="scenario-list" class="scenario-list"></div>
+          <p id="scenario-search-empty" class="scenario-search-empty" hidden>No matching situations. Try another keyword.</p>
+          <div class="panel-foot">You can also type a situation in your own words. <b>Test all</b> checks whether each built-in scenario has a reply.</div>
+        </aside>
+        <div class="chat-window">
+          <div class="chat-head"><div class="bot-avatar">✓</div><div><b>UPI Safety Coach</b><small><span class="status-dot"></span> Ready to help</small></div><button id="reset-chat" class="icon-button" title="Restart chat" aria-label="Restart chat">↻</button></div>
+          <div class="chat-messages" id="messages" aria-live="polite">
+            <div class="message bot-message"><div class="message-avatar">✓</div><div class="bubble"><b>Namaste! Welcome to UPI Safety Coach.</b><br>Tell me what happened, or select a situation from the list. I’ll explain possible warning signs and safe next steps.<div class="warning-inline">🔒 Never type your real PIN or OTP here.</div></div></div>
+          </div>
+          <div class="chat-mode-row"><label for="chat-mode">Chat mode</label><select id="chat-mode"><option value="checks">Safety checks (built-in)</option><option value="ai">AI Help (ChatGPT-powered)</option></select><span id="ai-status">AI mode needs a configured server</span></div><div class="quick-area"><span>TRY A QUICK CHECK</span><div id="quick-buttons" class="quick-buttons"></div></div>
+          <form id="chat-form" class="chat-input-row">
+            <label class="sr-only" for="user-message">Describe a suspicious situation</label>
+            <input id="user-message" maxlength="500" autocomplete="off" placeholder="Describe the situation (no personal details)…">
+            <button class="send-button" type="submit" aria-label="Send message">➤</button>
+          </form>
+          <div class="chat-disclaimer">Privacy guard: messages that look like PINs, OTPs, card numbers or account details are not displayed. This tool cannot verify transactions or replace official advice.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section safety-section" id="safety">
+      <div class="section-heading centered"><div class="eyebrow">FIVE RULES TO REMEMBER</div><h2>Keep your UPI safer</h2><p>Small checks can help protect you from payment fraud.</p></div>
+      <div class="rules-grid">
+        <article class="rule-card"><span class="rule-number">01</span><div class="rule-icon">🔐</div><h3>Keep your PIN private</h3><p>Never share your UPI PIN or OTP with anyone, including callers claiming to be bank staff.</p></article>
+        <article class="rule-card"><span class="rule-number">02</span><div class="rule-icon">↙</div><h3>Receiving money?</h3><p>You generally do not need to enter your UPI PIN just to receive money.</p></article>
+        <article class="rule-card"><span class="rule-number">03</span><div class="rule-icon">▦</div><h3>Check before scanning</h3><p>A QR code or collect request can lead to a payment. Read the screen carefully before approving.</p></article>
+        <article class="rule-card"><span class="rule-number">04</span><div class="rule-icon">☎</div><h3>Verify support contacts</h3><p>Use the official bank or payment app website—not numbers sent by strangers.</p></article>
+        <article class="rule-card"><span class="rule-number">05</span><div class="rule-icon">⏸</div><h3>Pause under pressure</h3><p>Do not rush because of threats, prizes, refunds, or urgent requests. Verify independently.</p></article>
+      </div>
+    </section>
+
+    <section class="section report-section">
+      <div class="report-card"><div class="report-symbol">!</div><div class="report-copy"><div class="eyebrow">OFFICIAL HELP</div><h2>Think you have been scammed?</h2><p>Act quickly. Contact your bank or payment app using its official channel. For financial cyber fraud in India, call 1930 and use the National Cyber Crime Reporting Portal.</p><small>Do not share private banking details with this demo app.</small></div><div class="report-buttons"><a class="btn btn-danger" href="tel:1930">☎ Call 1930</a><a class="btn btn-dark" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">Open cybercrime.gov.in ↗</a></div></div>
+    </section>
+
+    <section class="section poster-section" id="poster">
+      <div class="section-heading"><div><div class="eyebrow">SHARE AWARENESS</div><h2>Safety poster</h2><p>Preview a bilingual English + Telugu poster and save it as an image to share with permission.</p></div><button id="download-poster" class="btn btn-primary">↓ Download poster</button></div>
+      <div class="poster-wrap"><canvas id="poster-canvas" width="1080" height="1350" aria-label="Bilingual UPI safety poster preview"></canvas></div>
+      <p class="poster-note">Share the poster in WhatsApp groups only with the group admin’s permission. The poster includes the official reporting website and 1930 helpline.</p>
+    </section>
+</main>
+
+  <section class="future-note"><div class="future-note-orb">✦</div><div><span class="eyebrow">BUILT FOR A SAFER DIGITAL INDIA</span><h2>Pause the pressure. Protect your payment.</h2><p>UPI Safety Coach is an awareness tool. It helps identify common warning signs, but it cannot verify a transaction or guarantee that a message is safe.</p></div><a class="btn btn-outline" href="#chat">Run a safety check ↗</a></section>
+  <footer><div class="brand"><span class="brand-mark">✓</span><span>UPI <b>Safety Coach</b></span></div><p>Student awareness prototype · Not an official government service</p><div><a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">Official cybercrime portal ↗</a></div></footer>
+
+  <!-- Floating website help assistant -->
+  <button id="site-help-launcher" class="site-help-launcher" type="button" aria-label="Open website help assistant" aria-expanded="false" title="Website help">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8 8 0 0 1-8.2 8 8.8 8.8 0 0 1-3.7-.8L3 20l1.3-4.1a7.7 7.7 0 0 1-1.1-4.1 8.1 8.1 0 0 1 8.3-8 8.1 8.1 0 0 1 8.3 7.7Z"/><path d="M8.5 10h.01M12.2 10h.01M15.9 10h.01"/></svg>
+    <span class="site-help-online"></span>
+  </button>
+  <section id="site-help-panel" class="site-help-panel" aria-label="UPI Safety Coach website help" aria-hidden="true">
+    <header class="site-help-head"><span class="site-help-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="7" width="14" height="12" rx="4"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6M3 11v4M21 11v4"/></svg></span><div class="site-help-title"><b id="site-help-title">Website Help Assistant</b><small id="site-help-subtitle">Here to help you use this website</small></div><button id="site-help-expand" class="site-help-control" type="button" aria-label="Expand chat" title="Expand">⤢</button><button id="site-help-close" class="site-help-control" type="button" aria-label="Close chat" title="Close">×</button></header>
+    <div id="site-help-messages" class="site-help-messages" aria-live="polite"><div class="site-help-bubble assistant-bubble" id="site-help-welcome">👋 Hi! I can help you understand how to use UPI Safety Coach. What would you like to know?</div></div>
+    <div class="site-help-suggestions" id="site-help-suggestions"><button type="button" data-help="check">How do I check a message?</button><button type="button" data-help="language">How do I change language?</button><button type="button" data-help="poster">How do I download the poster?</button><button type="button" data-help="ai">How does AI Help work?</button></div>
+    <form id="site-help-form" class="site-help-form"><input id="site-help-input" type="text" autocomplete="off" maxlength="500" placeholder="Ask about this website…" aria-label="Ask about this website"><button type="submit" aria-label="Send question">➤</button></form>
+    <div class="site-help-foot" id="site-help-foot">Website guidance only · Never share banking secrets</div>
+  </section>
+  <script src="script.js"></script>
+  <script src="language-ai.js"></script>
+  <script src="website-assistant.js"></script>
+  <script src="enhanced-features.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "upi-safety-coach",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Futuristic multilingual UPI safety awareness prototype with secure optional AI backend",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
